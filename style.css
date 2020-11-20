@@ -12,7 +12,7 @@ body {
 }
 
 .todoApp {
-  width: 40%;
+  width: 50%;
   margin: 5% auto;
 }
 .todoApp__form {
@@ -108,6 +108,11 @@ body {
   display: none;
 }
 
+@media only screen and (max-width: 1000px) {
+  .todoApp {
+    width: 70%;
+  }
+}
 @media only screen and (max-width: 800px) {
   .todoApp {
     width: 80%;
