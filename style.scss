@@ -14,3 +14,40 @@ $grey: #cbd5d2;
 $bodybg: #eef3f6;
 $input-todo-bgc: rgba(255, 255, 255, 0.3);
 $font-size: 16px;
+
+body {
+  background-color: $bodybg;
+  font-size: $font-size;
+  font-family: "Roboto", sans-serif;
+}
+
+.todoApp {
+  width: 40%;
+  margin: 5% auto;
+  &__form {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: $green;
+    margin-bottom: 20px;
+    input {
+      border-radius: 5px;
+      background-color: $input-todo-bgc;
+      outline: none;
+      border: none;
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+  &__list {
+    margin: 0 auto;
+    width: 95%;
+    &__item {
+      border-radius: 5px;
+      background-color: $white;
+      margin-bottom: 10px;
+      padding: 20px;
+    }
+  }
+}

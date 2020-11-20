@@ -1,5 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("./icons/style.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+body {
+  background-color: #eef3f6;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.todoApp {
+  width: 40%;
+  margin: 5% auto;
+}
+.todoApp__form {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #19ba99;
+  margin-bottom: 20px;
+}
+.todoApp__form input {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+  border: none;
+}
+.todoApp__form input:focus {
+  outline: none;
+  border: none;
+}
+.todoApp__list {
+  margin: 0 auto;
+  width: 95%;
+}
+.todoApp__list__item {
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 20px;
+}
 
 /*# sourceMappingURL=style.css.map */
