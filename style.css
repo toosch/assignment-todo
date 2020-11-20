@@ -23,6 +23,8 @@ body {
   margin-bottom: 20px;
 }
 .todoApp__form input {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
   color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -39,10 +41,11 @@ body {
   border: none;
 }
 .todoApp__form__button {
+  font-size: 20px;
   position: absolute;
   top: 20px;
   right: 20px;
-  padding: 18.5px 20.5px;
+  padding: 18px 21.5px;
   background-color: #fff;
   border-radius: 50%;
   color: #19ba99;
@@ -52,22 +55,40 @@ body {
   width: 95%;
 }
 .todoApp__list__item {
+  box-shadow: 2px 2px 1px #cbd5d2;
   display: flex;
   border-radius: 5px;
   background-color: #fff;
   margin-bottom: 10px;
   padding: 20px;
 }
+.todoApp__list__item .icon {
+  font-size: 28px;
+}
 .todoApp__list__item .icon--remove {
+  position: relative;
   color: #cbd5d2;
   align-self: end;
   margin-left: auto;
+  margin-right: 40px;
 }
 .todoApp__list__item .icon--remove:hover {
   color: red;
 }
+.todoApp__list__item .icon--remove::after {
+  content: "";
+  height: 38px;
+  border-right: 1px solid #cbd5d2;
+  display: block;
+  position: absolute;
+  top: -4px;
+  left: 44px;
+}
 .todoApp__list__item .icon--check {
   color: #19ba99;
+}
+.todoApp__list__item span {
+  line-height: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

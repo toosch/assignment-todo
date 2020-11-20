@@ -35,6 +35,8 @@ body {
     background-color: $green;
     margin-bottom: 20px;
     input {
+      font-size: $font-size;
+      font-family: "Roboto", sans-serif;
       color: $white;
       padding: 20px;
       border-radius: 5px;
@@ -51,10 +53,11 @@ body {
       }
     }
     &__button {
+      font-size: 20px;
       position: absolute;
       top: 20px;
       right: 20px;
-      padding: 18.5px 20.5px;
+      padding: 18px 21.5px;
       background-color: $white;
       border-radius: 50%;
       color: $green;
@@ -65,23 +68,39 @@ body {
     width: 95%;
 
     &__item {
+      box-shadow: 2px 2px 1px $grey;
       display: flex;
       border-radius: 5px;
       background-color: $white;
       margin-bottom: 10px;
       padding: 20px;
       .icon {
+        font-size: 28px;
         &--remove {
+          position: relative;
           color: $grey;
           align-self: end;
           margin-left: auto;
+          margin-right: 40px;
           &:hover {
             color: red;
+          }
+          &::after {
+            content: "";
+            height: 38px;
+            border-right: 1px solid $grey;
+            display: block;
+            position: absolute;
+            top: -4px;
+            left: 44px;
           }
         }
         &--check {
           color: $green;
         }
+      }
+      span {
+        line-height: 30px;
       }
     }
   }
