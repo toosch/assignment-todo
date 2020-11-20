@@ -15,6 +15,10 @@ $bodybg: #eef3f6;
 $input-todo-bgc: rgba(255, 255, 255, 0.3);
 $font-size: 16px;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: $bodybg;
   font-size: $font-size;
@@ -30,10 +34,16 @@ body {
     background-color: $green;
     margin-bottom: 20px;
     input {
+      color: $white;
+      padding: 20px;
       border-radius: 5px;
       background-color: $input-todo-bgc;
       outline: none;
       border: none;
+      width: 100%;
+      &::placeholder {
+        color: $white;
+      }
       &:focus {
         outline: none;
         border: none;
@@ -43,11 +53,26 @@ body {
   &__list {
     margin: 0 auto;
     width: 95%;
+
     &__item {
+      display: flex;
       border-radius: 5px;
       background-color: $white;
       margin-bottom: 10px;
       padding: 20px;
+      .icon {
+        &--remove {
+          color: $grey;
+          align-self: end;
+          margin-left: auto;
+          &:hover {
+            color: red;
+          }
+        }
+        &--check {
+          color: $green;
+        }
+      }
     }
   }
 }

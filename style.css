@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("./icons/style.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #eef3f6;
   font-size: 16px;
@@ -18,10 +22,16 @@ body {
   margin-bottom: 20px;
 }
 .todoApp__form input {
+  color: #fff;
+  padding: 20px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.3);
   outline: none;
   border: none;
+  width: 100%;
+}
+.todoApp__form input::placeholder {
+  color: #fff;
 }
 .todoApp__form input:focus {
   outline: none;
@@ -32,10 +42,22 @@ body {
   width: 95%;
 }
 .todoApp__list__item {
+  display: flex;
   border-radius: 5px;
   background-color: #fff;
   margin-bottom: 10px;
   padding: 20px;
+}
+.todoApp__list__item .icon--remove {
+  color: #cbd5d2;
+  align-self: end;
+  margin-left: auto;
+}
+.todoApp__list__item .icon--remove:hover {
+  color: red;
+}
+.todoApp__list__item .icon--check {
+  color: #19ba99;
 }
 
 /*# sourceMappingURL=style.css.map */
