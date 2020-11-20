@@ -71,6 +71,7 @@ body {
   align-self: end;
   margin-left: auto;
   margin-right: 40px;
+  transition-duration: 0.4s;
 }
 .todoApp__list__item .icon--remove:hover {
   color: red;
@@ -105,6 +106,17 @@ body {
 }
 .todoApp__list__item--checked .icon--uncheck {
   display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .todoApp {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .todoApp {
+    width: 95%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -82,6 +82,7 @@ body {
           align-self: end;
           margin-left: auto;
           margin-right: 40px;
+          transition-duration: 0.4s;
           &:hover {
             color: red;
           }
@@ -119,5 +120,17 @@ body {
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .todoApp {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .todoApp {
+    width: 95%;
   }
 }
