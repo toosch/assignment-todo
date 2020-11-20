@@ -98,9 +98,25 @@ body {
         &--check {
           color: $green;
         }
+        &--uncheck {
+          color: $green;
+        }
       }
       span {
         line-height: 30px;
+      }
+      .icon--check {
+        display: none;
+      }
+      &--checked {
+        text-decoration: line-through;
+        text-decoration-color: $green;
+        .icon--check {
+          display: inline-block;
+        }
+        .icon--uncheck {
+          display: none;
+        }
       }
     }
   }

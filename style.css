@@ -87,8 +87,24 @@ body {
 .todoApp__list__item .icon--check {
   color: #19ba99;
 }
+.todoApp__list__item .icon--uncheck {
+  color: #19ba99;
+}
 .todoApp__list__item span {
   line-height: 30px;
+}
+.todoApp__list__item .icon--check {
+  display: none;
+}
+.todoApp__list__item--checked {
+  text-decoration: line-through;
+  text-decoration-color: #19ba99;
+}
+.todoApp__list__item--checked .icon--check {
+  display: inline-block;
+}
+.todoApp__list__item--checked .icon--uncheck {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
