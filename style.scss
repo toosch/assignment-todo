@@ -39,11 +39,11 @@ body {
       font-family: "Roboto", sans-serif;
       color: $white;
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 5px 30px 30px 5px;
       background-color: $input-todo-bgc;
       outline: none;
       border: none;
-      width: calc(100% - 30px);
+      width: 100%;
       &::placeholder {
         color: $white;
       }
@@ -53,11 +53,12 @@ body {
       }
     }
     &__button {
-      font-size: 20px;
+      text-decoration: none;
+      font-size: 40px;
       position: absolute;
       top: 20px;
       right: 20px;
-      padding: 18px 21.5px;
+      padding: 9.5px 18.5px;
       background-color: $white;
       border-radius: 50%;
       color: $green;
@@ -68,6 +69,7 @@ body {
     width: 95%;
 
     &__item {
+      position: relative;
       box-shadow: 2px 2px 1px $grey;
       display: flex;
       border-radius: 5px;
@@ -77,7 +79,6 @@ body {
       .icon {
         font-size: 28px;
         &--remove {
-          position: relative;
           color: $grey;
           align-self: end;
           margin-left: auto;
@@ -85,15 +86,6 @@ body {
           transition-duration: 0.4s;
           &:hover {
             color: red;
-          }
-          &::after {
-            content: "";
-            height: 38px;
-            border-right: 1px solid $grey;
-            display: block;
-            position: absolute;
-            top: -4px;
-            left: 44px;
           }
         }
         &--check {
@@ -118,6 +110,15 @@ body {
         .icon--uncheck {
           display: none;
         }
+      }
+      &::after {
+        content: "";
+        height: 38px;
+        border-right: 1px solid $grey;
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 70px;
       }
     }
   }

@@ -27,11 +27,11 @@ body {
   font-family: "Roboto", sans-serif;
   color: #fff;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 5px 30px 30px 5px;
   background-color: rgba(255, 255, 255, 0.3);
   outline: none;
   border: none;
-  width: calc(100% - 30px);
+  width: 100%;
 }
 .todoApp__form input::placeholder {
   color: #fff;
@@ -41,11 +41,12 @@ body {
   border: none;
 }
 .todoApp__form__button {
-  font-size: 20px;
+  text-decoration: none;
+  font-size: 40px;
   position: absolute;
   top: 20px;
   right: 20px;
-  padding: 18px 21.5px;
+  padding: 9.5px 18.5px;
   background-color: #fff;
   border-radius: 50%;
   color: #19ba99;
@@ -55,6 +56,7 @@ body {
   width: 95%;
 }
 .todoApp__list__item {
+  position: relative;
   box-shadow: 2px 2px 1px #cbd5d2;
   display: flex;
   border-radius: 5px;
@@ -66,7 +68,6 @@ body {
   font-size: 28px;
 }
 .todoApp__list__item .icon--remove {
-  position: relative;
   color: #cbd5d2;
   align-self: end;
   margin-left: auto;
@@ -75,15 +76,6 @@ body {
 }
 .todoApp__list__item .icon--remove:hover {
   color: red;
-}
-.todoApp__list__item .icon--remove::after {
-  content: "";
-  height: 38px;
-  border-right: 1px solid #cbd5d2;
-  display: block;
-  position: absolute;
-  top: -4px;
-  left: 44px;
 }
 .todoApp__list__item .icon--check {
   color: #19ba99;
@@ -106,6 +98,15 @@ body {
 }
 .todoApp__list__item--checked .icon--uncheck {
   display: none;
+}
+.todoApp__list__item::after {
+  content: "";
+  height: 38px;
+  border-right: 1px solid #cbd5d2;
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 70px;
 }
 
 @media only screen and (max-width: 1000px) {
