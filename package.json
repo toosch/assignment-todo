@@ -1,0 +1,27 @@
+{
+  "name": "todo_app",
+  "version": "1.0.0",
+  "description": "fsd-toon-todo.surge.sh",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "npm-run-all --parallel sass-dev server-dev",
+    "sass-dev": "sass ./src/css/styles.scss ./dist/style.css --watch",
+    "server-dev": "live-server",
+    "build": "npm-run-all --serial clean sass-prod deploy",
+    "clean": "rm -r ./dist/",
+    "sass-prod": "sass ./src/css/styles.scss ./dist/style.css --no-source-map --style=compressed",
+    "deploy": "surge . --domain https://fsd-toon-todo.surge.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toosch/assignment-todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toosch/assignment-todo/issues"
+  },
+  "homepage": "https://github.com/toosch/assignment-todo#readme"
+}
